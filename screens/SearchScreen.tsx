@@ -95,7 +95,18 @@ const SearchScreen: React.FC = () => {
   };
 
   const renderSearchResult = ({ item }: { item: SearchResult }) => (
-    <View style={styles.resultItem}>
+    <TouchableOpacity
+      style={styles.resultItem}
+      onPress={() =>
+        navigation.navigate("VideoDetail", {
+          videoId: item.id,
+          title: item.title,
+          channelName: item.channelName,
+          description: item.description,
+          publishedAt: item.publishedAt,
+        })
+      }
+    >
       <View style={styles.videoContainer}>
         <View style={styles.thumbnailContainer}>
           <Image
@@ -111,7 +122,7 @@ const SearchScreen: React.FC = () => {
         </Text>
         <Text style={styles.publishDate}>{item.publishedAt.slice(0, 10)}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 
   return (

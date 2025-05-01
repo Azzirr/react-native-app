@@ -14,6 +14,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../types/navigation";
 import Video from "react-native-video";
 import { fetchVideoStatistics } from "../api/youtube";
+import VideoControlsOverlay from "../components/VideoControlsOverlay";
 
 const { width } = Dimensions.get("window");
 
@@ -95,23 +96,21 @@ const VideoDetailScreen: React.FC = () => {
             <Video
               source={{ uri: videoUri }}
               style={styles.videoThumbnail}
-              controls={true}
+              controls={false}
               resizeMode="cover"
               paused={!isPlaying}
               onError={(e) => console.error("Video error:", e)}
             />
 
-            {!isPlaying && (
-              <TouchableOpacity
-                style={styles.playButton}
-                onPress={togglePlayPause}
-              >
-                <Image
-                  source={require("../assets/adaptive-icon.png")}
-                  style={styles.playIcon}
-                />
-              </TouchableOpacity>
-            )}
+            <VideoControlsOverlay
+              isPlaying={isPlaying}
+              onPlayPause={togglePlayPause}
+              onBack={() => navigation.goBack()}
+              onPrev={() => console.log("prev")}
+              onNext={() => console.log("next")}
+              onVolume={() => console.log("volume")}
+              onCast={() => console.log("cast")}
+            />
           </View>
         </View>
 
@@ -121,7 +120,7 @@ const VideoDetailScreen: React.FC = () => {
           <View style={styles.channelInfo}>
             <View style={styles.channelAvatar}>
               <Image
-                source={require("../assets/adaptive-icon.png")}
+                source={require("../assets/icons/person-icon.png")}
                 style={styles.avatarImage}
               />
             </View>
