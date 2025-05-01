@@ -6,9 +6,9 @@ import LoginScreen from "../screens/LoginScreen";
 import HomeScreen from "../screens/HomeScreen";
 import SearchScreen from "../screens/SearchScreen";
 import VideoDetailScreen from "../screens/VideoDetailScreen";
-import { Ionicons } from "@expo/vector-icons";
-import { RootStackParamList } from "../types/navigation";
+import SettingsScreen from "../screens/SettingsScreen";
 import { View, Image, StyleSheet } from "react-native";
+import { RootStackParamList } from "../types/navigation";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator();
@@ -77,6 +77,11 @@ export default function AppNavigator() {
         <Stack.Screen
           name="VideoDetail"
           component={VideoDetailScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Settings"
+          component={SettingsScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

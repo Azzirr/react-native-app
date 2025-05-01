@@ -1,7 +1,6 @@
 export type RootStackParamList = {
   Login: undefined;
   Main: undefined;
-  Search: { query?: string };
   VideoDetail: {
     videoId: string;
     title: string;
@@ -9,4 +8,8 @@ export type RootStackParamList = {
     description: string;
     publishedAt: string;
   };
+  Search: {
+    query: string;
+  };
+  Settings: undefined;
 };

@@ -34,6 +34,10 @@ const SearchBar: React.FC<SearchBarProps> = ({
     }
   };
 
+  const goToSettings = () => {
+    navigation.navigate("Settings");
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.searchContainer}>
@@ -62,7 +66,10 @@ const SearchBar: React.FC<SearchBarProps> = ({
           )}
         </View>
         {showSettingsButton && (
-          <TouchableOpacity style={styles.settingsButton}>
+          <TouchableOpacity
+            style={styles.settingsButton}
+            onPress={goToSettings}
+          >
             <Ionicons name="settings-outline" size={24} color="#2B2D42" />
           </TouchableOpacity>
         )}
