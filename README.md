@@ -15,12 +15,14 @@
    ```
 
 3. **Create a .env file in the root directory and add your Youtube API key:**
+   ```bash
    YOUTUBE_API_KEY=your-youtube-api-key
+   ```
 
-4. **Run the app**
+5. **Run the app**
 
    ```bash
    npm start
    ```
 
-5. **Once project is build, click W in the console to run project on your Web Browser**
+6. **Once project is build, click W in the console to run project on your Web Browser**
