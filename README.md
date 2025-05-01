@@ -3,7 +3,7 @@
 1. **Clone the repository**:
 
    ```bash
-   git clone [<REPO_URL>](https://github.com/Azzirr/react-native-app.git)
+   git clone [[<REPO_URL>](https://github.com/Azzirr/react-native-app.git)](https://github.com/Azzirr/react-native-app.git)
    cd react-native-app
 
    ```
