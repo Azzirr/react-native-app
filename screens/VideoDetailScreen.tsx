@@ -5,7 +5,6 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
-  Dimensions,
   SafeAreaView,
   Image,
 } from "react-native";
@@ -15,8 +14,6 @@ import { RootStackParamList } from "../types/navigation";
 import Video from "react-native-video";
 import { fetchVideoStatistics } from "../api/youtube";
 import VideoControlsOverlay from "../components/VideoControlsOverlay";
-
-const { width } = Dimensions.get("window");
 
 type DetailRoute = RouteProp<RootStackParamList, "VideoDetail">;
 

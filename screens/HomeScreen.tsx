@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
   },
   showMore: {
-    fontSize: 14,
+    fontSize: 12,
     color: "#2B2D42",
     textDecorationLine: "underline",
     paddingRight: 20,

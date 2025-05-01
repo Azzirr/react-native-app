@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   loginButtonText: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "600",
     color: "#FFFFFF",
   },
@@ -133,12 +133,13 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   termsText: {
-    fontSize: 12,
+    fontSize: 13,
     color: "#FFFFFF",
     textAlign: "center",
     lineHeight: 18,
   },
   termsLink: {
+    fontSize: 13,
     textDecorationLine: "underline",
     color: "#2B2D42",
   },

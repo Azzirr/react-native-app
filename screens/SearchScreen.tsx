@@ -6,7 +6,6 @@ import {
   FlatList,
   TouchableOpacity,
   Image,
-  SafeAreaView,
 } from "react-native";
 import {
   useRoute,
@@ -213,11 +212,11 @@ const styles = StyleSheet.create({
   },
   channelName: {
     fontWeight: "bold",
-    fontSize: 14,
+    fontSize: 12,
     marginTop: 8,
   },
   videoDescription: {
-    fontSize: 12,
+    fontSize: 15,
     color: "#333333",
     lineHeight: 16,
   },
