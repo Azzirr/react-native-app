@@ -1,7 +1,8 @@
 import axios from "axios";
 import { Video } from "../types/video";
+import Constants from "expo-constants";
 
-const API_KEY = "AIzaSyDH5P3ZnjoRVTIUZu4kHf6ALNhr72tWHmE";
+const API_KEY = Constants.expoConfig?.extra?.YOUTUBE_API_KEY;
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
 
 export interface YouTubeVideo {
